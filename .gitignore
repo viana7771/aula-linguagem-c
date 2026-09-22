@@ -1,0 +1,14 @@
+# Build artifacts
+build/
+*.exe
+*.o
+*.obj
+*.dll
+
+# Dev-C++ project metadata
+*.dev
+
+# OS files
+.DS_Store
+Thumbs.db
+,
