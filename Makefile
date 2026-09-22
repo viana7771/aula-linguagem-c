@@ -1,16 +1,16 @@
-CC := "C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/g++.exe"
+CC := "C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/gcc.exe"
 SRC_DIR := src
 BUILD_DIR := build
 
-CPP_FILES := $(wildcard $(SRC_DIR)/*.cpp)
-TARGETS := $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.exe,$(CPP_FILES))
+C_FILES := $(wildcard $(SRC_DIR)/*.c)
+TARGETS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.exe,$(C_FILES))
 
 all: $(TARGETS)
 
 $(BUILD_DIR):
 	@if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
 
-$(BUILD_DIR)/%.exe: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
+$(BUILD_DIR)/%.exe: $(SRC_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $< -o $@
 
 clean:

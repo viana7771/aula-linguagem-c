@@ -1,29 +1,54 @@
-# Linguagem C - Exercícios
+# Linguagem C - Atividades da aula
 
-Este projeto foi reorganizado para permitir que cada atividade fique em um arquivo separado e possa ser compilada individualmente no VS Code.
+Este repositório reúne uma série de atividades práticas desenvolvidas durante a disciplina de Linguagem C. O objetivo foi praticar conceitos básicos da linguagem, como entrada e saída, variáveis, tipos de dados, operações matemáticas e estruturação de programas.
 
-## Estrutura
+## Organização do projeto
 
-- `src/` : arquivos com cada exercício
-- `build/` : arquivos compilados gerados pela compilação
-- `Makefile` : compila todos os exercícios em `src/`
+- `src/` : contém cada atividade em um arquivo separado
+- `build/` : contém os arquivos executáveis gerados pela compilação
+- `Makefile` : compila todos os exercícios em sequência
+- `.gitignore` : ignora arquivos gerados automaticamente
 
-## Como compilar
+## Atividades incluídas
+
+### 01_ola_mundo.c
+Exercício inicial para testar a função `printf()` e confirmar que o ambiente de compilação está funcionando corretamente.
+
+### 02_dados_pessoais.c
+Atividade de uso de variáveis e tipos básicos, como:
+- `int` para idade
+- `float` para altura
+- `char` para sexo
+- `char[]` para nome
+
+### 03_operacoes_basicas.c
+Programa que lê dois valores inteiros e realiza:
+- soma
+- subtração
+- multiplicação
+- divisão inteira
+- resto da divisão
+
+## Como compilar no VS Code
 
 No terminal do VS Code, execute:
 
-```bash
-make
+```powershell
+& "C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\gcc.exe" "src\01_ola_mundo.c" -o "build\01_ola_mundo.exe"
 ```
 
-Ou compile um arquivo específico:
+Para compilar todos os arquivos juntos:
 
-```bash
-"C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/g++.exe" src/01_ola_mundo.cpp -o build/01_ola_mundo.exe
+```powershell
+make
 ```
 
 ## Como executar
 
-```bash
-./build/01_ola_mundo.exe
+```powershell
+& ".\build\01_ola_mundo.exe"
 ```
+
+## Observação
+
+Este projeto foi reorganizado para ficar mais adequado ao versionamento no Git e para facilitar a execução de cada atividade individualmente no VS Code.
